@@ -75,9 +75,14 @@ export async function getMyActiveSos(userId: string): Promise<SosEvent | null> {
 }
 
 export async function getBusinessActiveSosEvents(businessId: string): Promise<SosEventWithProfile[]> {
+  // sos_events has THREE foreign keys into profiles (user_id,
+  // acknowledged_by, resolved_by), so the embed must name the exact
+  // relationship to use (`!user_id`) — otherwise PostgREST can't tell
+  // which one you mean and returns a PGRST201 "more than one
+  // relationship" error.
   const { data, error } = await supabase
     .from('sos_events')
-    .select('*, profile:profiles(id, name, phone)')
+    .select('*, profile:profiles!user_id(id, name, phone)')
     .eq('business_id', businessId)
     .in('status', ['active', 'acknowledged'])
     .order('triggered_at', { ascending: false });
@@ -88,7 +93,7 @@ export async function getBusinessActiveSosEvents(businessId: string): Promise<So
 export async function getBusinessSosHistory(businessId: string, limit = 50): Promise<SosEventWithProfile[]> {
   const { data, error } = await supabase
     .from('sos_events')
-    .select('*, profile:profiles(id, name, phone)')
+    .select('*, profile:profiles!user_id(id, name, phone)')
     .eq('business_id', businessId)
     .order('triggered_at', { ascending: false })
     .limit(limit);
