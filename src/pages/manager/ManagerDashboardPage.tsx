@@ -47,6 +47,11 @@ export function ManagerDashboardPage() {
       setSosThisMonth(sosCount);
       setAvgAck(avg);
     } catch (err) {
+      // Temporary diagnostic logging — remove once the dashboard load
+      // issue is resolved. Prints the real Supabase/Postgres error to the
+      // browser console instead of only showing the generic banner.
+      // eslint-disable-next-line no-console
+      console.error('[Alerta] Dashboard load failed:', err);
       setError(toFriendlyError(err, "We couldn't load your dashboard."));
     } finally {
       setLoading(false);
