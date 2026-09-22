@@ -48,6 +48,36 @@ Prints login credentials for every seeded account when it finishes. This
 script requires the **service role key** and is never run in production
 or bundled into the app — see `supabase/seed/README.md`.
 
+## Deploying (Render)
+
+Alerta is a pure client-side SPA (Vite build output + Supabase as the
+backend) — no server process is required, so it deploys as a **Static
+Site** on Render.
+
+**Option A — Blueprint (recommended):** this repo includes a
+[`render.yaml`](render.yaml). In the Render dashboard: **New → Blueprint**,
+select this repo, and Render will create the static site from that file.
+You'll be prompted for `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`
+(and optionally `VITE_VAPID_PUBLIC_KEY`) since those are marked
+`sync: false` in the blueprint — Render never stores a default for them.
+
+**Option B — Manual static site:** **New → Static Site**, connect this
+repo, then set:
+
+| Setting | Value |
+|---|---|
+| Build Command | `npm ci && npm run build` |
+| Publish Directory | `dist` |
+
+Then add a **Redirect/Rewrite Rule**: source `/*` → destination
+`/index.html`, action **Rewrite** (required for React Router's
+client-side routes to survive a page refresh). Add the same environment
+variables as above under the service's Environment tab.
+
+Either way, you'll need a Supabase project with the migrations applied
+first — see the next section — and the render.yaml/dashboard env vars
+only ever hold the public anon key, never a service-role secret.
+
 ## Project structure
 
 ```
