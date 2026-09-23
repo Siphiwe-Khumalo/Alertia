@@ -1,0 +1,99 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="canvas">
+      <rect x="0" y="0" width="1200" height="1500" rx="0" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#canvas)">
+    <!-- Base -->
+    <rect x="0" y="0" width="1200" height="1500" fill="#0a2021" />
+
+    <!-- Subtle depth shapes, no gradients -->
+    <circle cx="1000" cy="120" r="360" fill="#123736" opacity="0.55" />
+    <circle cx="1080" cy="160" r="220" fill="#164846" opacity="0.5" />
+    <rect x="0" y="1180" width="1200" height="320" fill="#0f2e2d" />
+
+    <!-- ===================== HEADER ===================== -->
+    <!-- Brand mark: rounded square with location-pulse -->
+    <g transform="translate(84,96)">
+      <rect x="0" y="0" width="104" height="104" rx="26" fill="#123736" />
+      <circle cx="52" cy="46" r="28" stroke="#7cadaa" stroke-width="3.2" opacity="0.5" />
+      <circle cx="52" cy="46" r="18" stroke="#adcdc9" stroke-width="3.6" opacity="0.8" />
+      <circle cx="52" cy="46" r="9.5" fill="#f7f8f7" />
+      <circle cx="52" cy="46" r="4.2" fill="#123736" />
+    </g>
+
+    <text x="204" y="140" font-family="Noto Sans, sans-serif" font-weight="800" font-size="58" fill="#f7f8f7">Alerta</text>
+    <text x="206" y="178" font-family="Noto Sans, sans-serif" font-weight="500" font-size="26" fill="#adcdc9">Safety that fits in your pocket.</text>
+
+    <!-- ===================== HEADLINE ===================== -->
+    <text x="84" y="330" font-family="Noto Sans, sans-serif" font-weight="800" font-size="60" fill="#ffffff">Workplace safety,</text>
+    <text x="84" y="398" font-family="Noto Sans, sans-serif" font-weight="800" font-size="60" fill="#ffffff">made simple.</text>
+
+    <text x="84" y="450" font-family="Noto Sans, sans-serif" font-weight="400" font-size="27" fill="#b9c0c1">Built for small businesses with 10&#8211;100 employees &#8212;</text>
+    <text x="84" y="486" font-family="Noto Sans, sans-serif" font-weight="400" font-size="27" fill="#b9c0c1">no enterprise cost or complexity.</text>
+
+    <!-- ===================== FEATURE CARDS ===================== -->
+    <!-- Card 1: Check-in/out -->
+    <g transform="translate(84,560)">
+      <rect x="0" y="0" width="1032" height="140" rx="20" fill="#123736" />
+      <circle cx="72" cy="70" r="40" fill="#1e5957" />
+      <g transform="translate(52,50)" stroke="#eef5f4" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="20" cy="20" r="15" />
+        <path d="M20 12 L20 20 L26 24" />
+      </g>
+      <text x="144" y="60" font-family="Noto Sans, sans-serif" font-weight="700" font-size="30" fill="#ffffff">Check-in / check-out</text>
+      <text x="144" y="96" font-family="Noto Sans, sans-serif" font-weight="400" font-size="22" fill="#adcdc9">One tap. No background tracking, ever.</text>
+    </g>
+
+    <!-- Card 2: Emergency SOS -->
+    <g transform="translate(84,722)">
+      <rect x="0" y="0" width="1032" height="140" rx="20" fill="#123736" />
+      <circle cx="72" cy="70" r="40" fill="#cc2726" />
+      <g transform="translate(52,50)" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 4 L36 32 L4 32 Z" />
+        <line x1="20" y1="14" x2="20" y2="22" />
+        <circle cx="20" cy="27" r="0.6" fill="#ffffff" stroke="none" />
+      </g>
+      <text x="144" y="60" font-family="Noto Sans, sans-serif" font-weight="700" font-size="30" fill="#ffffff">Emergency SOS</text>
+      <text x="144" y="96" font-family="Noto Sans, sans-serif" font-weight="400" font-size="22" fill="#adcdc9">One-tap alert with point-in-time GPS capture.</text>
+    </g>
+
+    <!-- Card 3: Incident reporting -->
+    <g transform="translate(84,884)">
+      <rect x="0" y="0" width="1032" height="140" rx="20" fill="#123736" />
+      <circle cx="72" cy="70" r="40" fill="#1e5957" />
+      <g transform="translate(52,50)" stroke="#eef5f4" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="2" width="30" height="36" rx="3" />
+        <line x1="12" y1="13" x2="28" y2="13" />
+        <line x1="12" y1="21" x2="28" y2="21" />
+        <line x1="12" y1="29" x2="22" y2="29" />
+      </g>
+      <text x="144" y="60" font-family="Noto Sans, sans-serif" font-weight="700" font-size="30" fill="#ffffff">Incident reporting</text>
+      <text x="144" y="96" font-family="Noto Sans, sans-serif" font-weight="400" font-size="22" fill="#adcdc9">Describe, rate severity, attach a photo &#8212; done.</text>
+    </g>
+
+    <!-- Card 4: Manager dashboard -->
+    <g transform="translate(84,1046)">
+      <rect x="0" y="0" width="1032" height="140" rx="20" fill="#123736" />
+      <circle cx="72" cy="70" r="40" fill="#1e5957" />
+      <g transform="translate(50,50)" stroke="#eef5f4" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="36" height="26" rx="3" />
+        <line x1="10" y1="36" x2="30" y2="36" />
+        <line x1="20" y1="30" x2="20" y2="36" />
+      </g>
+      <text x="144" y="60" font-family="Noto Sans, sans-serif" font-weight="700" font-size="30" fill="#ffffff">Manager dashboard</text>
+      <text x="144" y="96" font-family="Noto Sans, sans-serif" font-weight="400" font-size="22" fill="#adcdc9">Live alerts, roster, incidents &#8212; all in one place.</text>
+    </g>
+
+    <!-- ===================== FOOTER / CTA BAND ===================== -->
+    <text x="84" y="1290" font-family="Noto Sans, sans-serif" font-weight="800" font-size="40" fill="#ffffff">Your privacy, protected.</text>
+    <text x="84" y="1332" font-family="Noto Sans, sans-serif" font-weight="400" font-size="24" fill="#b9c0c1">No continuous location tracking. GPS is only captured</text>
+    <text x="84" y="1364" font-family="Noto Sans, sans-serif" font-weight="400" font-size="24" fill="#b9c0c1">the moment someone triggers an emergency.</text>
+
+    <rect x="84" y="1408" width="1032" height="2" fill="#2f6f6d" opacity="0.5" />
+
+    <text x="84" y="1462" font-family="Noto Sans, sans-serif" font-weight="700" font-size="26" fill="#7cadaa">Interested for your team? Let's talk.</text>
+  </g>
+</svg>
